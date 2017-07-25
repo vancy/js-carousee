@@ -657,7 +657,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/themes/blurred/variables";
+	@import "../../scss/themes/blurred/variables";
 
 	.container {
 		padding: 0 1rem;

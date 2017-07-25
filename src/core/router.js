@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/core/components/Hello'
+import Hello from '@/components/help/Hello'
 import Home from "@/modules/home"
 // import Counter from "@/modules/counter"
 // import Devices from "@/modules/devices"
@@ -11,8 +11,8 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/',name: 'Hello',component: Hello }
-		,{ path: "/home", name: 'Home', component: Home }
+    { path: '/hello',name: 'Hello', component: Hello },
+		{ path: "/home", name: 'Home', component: Home }
 		// { path: "/devices", name: 'Devices', component: Devices },
 		// { path: "/posts", name: 'Posts', component: Posts },
 		// { path: "/counter", name: 'Counter', component: Counter },

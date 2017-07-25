@@ -12,14 +12,12 @@ import VueI18Next from "./core/i18next.js";
 import VueFormGenerator from "vue-form-generator";
 import VueWebsocket from "vue-websocket";
 
-import store from "./core/store";
-import App from "./core/App";
+import App from "./components/App";
 
 Vue.use(Filters);
-
 Vue.use(VueFormGenerator);
-Vue.use(VueWebsocket);
 
+//Vue.use(VueWebsocket, "ws://vemapp.e-paper.space:80/");
 //Vue.http.headers.commonfg['X-CSRF-TOKEN'] = $('input[name="csrf"]').val();
 
 // Register i18next localization module. We need to
@@ -33,7 +31,6 @@ Vue.use(VueI18Next, (i18next) => {
 			App
 		},
 		router,
-		store,
 		render: h => h("app")
 	});
 });
