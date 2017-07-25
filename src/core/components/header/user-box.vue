@@ -1,29 +1,23 @@
-<template lang="pug">
-	.user-box(v-if="me")
-	
-		.user-info.right(@click="toggleUserMenu()")
-			img.avatar(:src='me.avatar')
-			.username {{ me.fullName }}
-			i.fa.fa-chevron-down
-
-		user-dropdown(:visible="expandedUserMenu")
-
-		.notification-box.right
-			ul.icons
-				li(@click="toggleNotifications()", :class=" { active: notifications.length > 0 }")
-					i.fa.fa-bell-o
-					span {{ notifications.length }}
-					.ring
-
-				li(@click="toggleMessages()", :class=" { active: messages.length > 0 }")
-					i.fa.fa-envelope-o
-					span {{ messages.length }}
-					.ring
-			
-			notifications-dropdown(:visible="expandedNotifications")
-			messages-dropdown(:visible="expandedMessages")
-
-
+<template>
+<div class="user-box" v-if="me">
+	<div class="user-info right" @click="toggleUserMenu()"><img class="avatar" :src="me.avatar"/>
+		<div class="username">{{ me.fullName }}</div><i class="fa fa-chevron-down"></i>
+	</div>
+	<user-dropdown :visible="expandedUserMenu"></user-dropdown>
+	<div class="notification-box right">
+		<ul class="icons">
+			<li @click="toggleNotifications()" :class=" { active: notifications.length &gt; 0 }"><i class="fa fa-bell-o"></i><span>{{ notifications.length }}</span>
+				<div class="ring"></div>
+			</li>
+			<li @click="toggleMessages()" :class=" { active: messages.length &gt; 0 }"><i class="fa fa-envelope-o"></i><span>{{ messages.length }}</span>
+				<div class="ring"></div>
+			</li>
+		</ul>
+		<notifications-dropdown :visible="expandedNotifications"></notifications-dropdown>
+		<messages-dropdown :visible="expandedMessages"></messages-dropdown>
+		<div class="copyright">&copy; Copyright, 2016</div>
+	</div>
+</div>
 </template>
 
 <script>
@@ -83,7 +77,7 @@
 		}
 
 	};
-	
+
 </script>
 
 <style lang="scss">

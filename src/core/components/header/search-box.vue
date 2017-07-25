@@ -1,8 +1,7 @@
-<template lang="pug">
-	.search-box
-		i.fa.fa-search
-		input(type="search", v-model="text", :placeholder="_('Search3dots')")
-
+<template>
+<div class="search-box"><i class="fa fa-search"></i>
+	<input type="search" v-model="text" :placeholder="_('Search3dots')"/>
+</div>
 </template>
 
 <script>
@@ -30,7 +29,7 @@
 			])
 		}
 	};
-	
+
 </script>
 
 <style lang="scss">

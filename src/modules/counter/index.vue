@@ -1,19 +1,10 @@
-<template lang="pug">
-	.container
-		h2.title {{ "Demo" | i18n }}
-
-		h3 {{ count }}
-		button.button.success(@click="inc") 
-			span.icon
-				i.fa.fa-arrow-up 
-			span {{ "Increment" | i18n }}
-		br
-		br
-		button.button.warning(@click="dec") 
-			span
-				i.fa.fa-arrow-up  
-			span {{ "Decrement" | i18n }}
-
+<template>
+  <div class="container">
+    <h2 class="title">{{ "Demo" | i18n }}</h2>
+    <h3>{{ count }}</h3>
+    <button class="button success" @click="inc"> <span class="icon"><i class="fa fa-arrow-up"> </i></span><span>{{ "Increment" | i18n }}</span></button><br/><br/>
+    <button class="button warning" @click="dec"> <span><i class="fa fa-arrow-up"> </i></span><span>{{ "Decrement" | i18n }}</span></button>
+  </div>
 </template>
 
 <script>
@@ -80,10 +71,10 @@
 		},
 
 		created() {
-			this.$service = new Service("counter", this); 
-			
+			this.$service = new Service("counter", this);
+
 			// Get the latest value of counter
-			this.getValue(); 
+			this.getValue();
 		}
 	};
 

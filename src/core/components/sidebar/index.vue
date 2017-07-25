@@ -1,49 +1,23 @@
-<template lang="pug">
-	aside.nav(:class="{ mini: minimized }")
-		.menu
-			.title {{ "General" | i18n }}
-			ul
-				router-link(tag="li", to="/")
-					a(:title="_('Home')")
-						span.icon
-							i.fa.fa-home
-						span.label {{ "Home" | i18n }}
-
-				router-link(tag="li", to="/counter")
-					a(:title="_('Demo')")
-						span.icon
-							i.fa.fa-tasks
-						span.label {{ "Demo" | i18n }}
-
-				router-link(tag="li", to="/devices")
-					a(:title="_('Devices')")
-						span.icon
-							i.fa.fa-tablet
-						span.label {{ "Devices" | i18n }}
-
-				router-link(tag="li", to="/posts")
-					a(:title="_('Posts')")
-						span.icon
-							i.fa.fa-comments
-						span.label {{ "Posts" | i18n }}
-
-			.title {{ "Profile" | i18n }}
-			ul
-				li
-					a(href="/logout", :title="_('Logout')")
-						span.icon
-							i.fa.fa-sign-out
-						span.label {{ "Logout" | i18n }}
-
-		.footer
-			.social
-				a(href="", target="_blank")
-					i.fa.fa-facebook
-				a(href="https://twitter.com/Icebobcsi", target="_blank")
-					i.fa.fa-twitter
-				a(href="https://github.com/icebob/vue-express-mongo-boilerplate", target="_blank")
-					i.fa.fa-github
-			.copyright &copy; Copyright, 2016
+<template>
+<aside class="nav" :class="{ mini: minimized }">
+	<div class="menu">
+		<div class="title">{{ "General" | i18n }}</div>
+		<ul>
+			<router-link tag="li" to="/"><a :title="_('Home')"><span class="icon"><i class="fa fa-home"></i></span><span class="label">{{ "Home" | i18n }}</span></a></router-link>
+			<router-link tag="li" to="/counter"><a :title="_('Demo')"><span class="icon"><i class="fa fa-tasks"></i></span><span class="label">{{ "Demo" | i18n }}</span></a></router-link>
+			<router-link tag="li" to="/devices"><a :title="_('Devices')"><span class="icon"><i class="fa fa-tablet"></i></span><span class="label">{{ "Devices" | i18n }}</span></a></router-link>
+			<router-link tag="li" to="/posts"><a :title="_('Posts')"><span class="icon"><i class="fa fa-comments"></i></span><span class="label">{{ "Posts" | i18n }}</span></a></router-link>
+		</ul>
+		<div class="title">{{ "Profile" | i18n }}</div>
+		<ul>
+			<li><a href="/logout" :title="_('Logout')"><span class="icon"><i class="fa fa-sign-out"></i></span><span class="label">{{ "Logout" | i18n }}</span></a></li>
+		</ul>
+	</div>
+	<div class="footer">
+		<div class="social"><a href="" target="_blank"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/Icebobcsi" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/icebob/vue-express-mongo-boilerplate" target="_blank"><i class="fa fa-github"></i></a></div>
+		<div class="copyright">&copy; Copyright, 2016</div>
+	</div>
+</aside>
 </template>
 
 <script>
@@ -53,7 +27,7 @@
 			"minimized"
 		]
 	};
-	
+
 </script>
 
 <style lang="scss">

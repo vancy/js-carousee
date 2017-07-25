@@ -1,34 +1,24 @@
-<template lang="pug">
-	.container
-		h3.title {{ schema.title }}
-
-		.flex.align-center.justify-space-around
-			.left(v-if="enabledNew")
-				button.button.is-primary(@click="newModel")
-					i.icon.fa.fa-plus 
-					| {{ schema.resources.addCaption || _("Add") }}
-			.right {{ _("SelectedOfAll", { selected: selected.length, all: rows.length } ) }}
-
-		data-table(:schema="schema.table", :rows="rows", :order="order", :search="search", :selected="selected", :select="select", :select-all="selectAll")
-
-		.form(v-if="model")
-			vue-form-generator(:schema='schema.form', :model='model', :options='options', :multiple="selected.length > 1", ref="form", :is-new-model="isNewModel")
-
-			.errors.text-center
-				div.alert.alert-danger(v-for="(item, index) in validationErrors", :key="index") {{ item.field.label }}: 
-					strong {{ item.error }}
-
-			.buttons.flex.justify-space-around
-				button.button.primary(@click="saveModel", :disabled="!enabledSave")
-					i.icon.fa.fa-save 
-					| {{ schema.resources.saveCaption || _("Save") }}
-				button.button.outline(@click="cloneModel", :disabled="!enabledClone")
-					i.icon.fa.fa-copy 
-					| {{ schema.resources.cloneCaption || _("Clone") }}
-				button.button.danger(@click="deleteModel", :disabled="!enabledDelete")
-					i.icon.fa.fa-trash 
-					| {{ schema.resources.deleteCaption || _("Delete") }}
-
+<template>
+  <div class="container"></div>
+  <h3 class="title">{{ schema.title }}</h3>
+  <div class="flex align-center justify-space-around">
+    <div class="left" v-if="enabledNew">
+      <button class="button is-primary" @click="newModel"><i class="icon fa fa-plus"> </i>{{ schema.resources.addCaption || _("Add") }}</button>
+    </div>
+    <div class="right">{{ _("SelectedOfAll", { selected: selected.length, all: rows.length } ) }}</div>
+  </div>
+  <data-table :schema="schema.table" :rows="rows" :order="order" :search="search" :selected="selected" :select="select" :select-all="selectAll"></data-table>
+  <div class="form" v-if="model">
+    <vue-form-generator :schema="schema.form" :model="model" :options="options" :multiple="selected.length &gt; 1" ref="form" :is-new-model="isNewModel"></vue-form-generator>
+    <div class="errors text-center">
+      <div class="alert alert-danger" v-for="(item, index) in validationErrors" :key="index">{{ item.field.label }}: <strong>{{ item.error }}</strong></div>
+    </div>
+    <div class="buttons flex justify-space-around">
+      <button class="button primary" @click="saveModel" :disabled="!enabledSave"><i class="icon fa fa-save"> </i>{{ schema.resources.saveCaption || _("Save") }}</button>
+      <button class="button outline" @click="cloneModel" :disabled="!enabledClone"><i class="icon fa fa-copy"> </i>{{ schema.resources.cloneCaption || _("Clone") }}</button>
+      <button class="button danger" @click="deleteModel" :disabled="!enabledDelete"><i class="icon fa fa-trash"> </i>{{ schema.resources.deleteCaption || _("Delete") }}</button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -77,12 +67,12 @@
 			enabledDelete() { return (this.model && !this.isNewModel && this.options.enableDeleteButton !== false); },
 
 			validationErrors() {
-				if (this.$refs.form && this.$refs.form.errors) 
+				if (this.$refs.form && this.$refs.form.errors)
 					return this.$refs.form.errors;
 
 				return [];
 			}
-		},	
+		},
 
 		watch: {
 			selected() {
@@ -104,7 +94,7 @@
 
 			select(event, row, add) {
 				this.isNewModel = false;
-				
+
 				if (this.schema.table.multiSelect === true && (add || (event && event.ctrlKey))) {
 					this.$parent.selectRow(row, true);
 				} else {
@@ -122,10 +112,10 @@
 					// Select all
 					this.$parent.selectRow(filteredRows, false);
 				} else {
-					// Unselect all 
+					// Unselect all
 					this.$parent.clearSelection();
 				}
-			},	
+			},
 
 			generateModel() {
 				if (this.selected.length == 1) {
@@ -152,7 +142,7 @@
 					if (el)
 						el.focus();
 				});
-			},	
+			},
 
 			cloneModel() {
 				console.log("Clone model...");
@@ -203,14 +193,14 @@
 					});
 				}
 
-				return res;	
+				return res;
 			}
 
 		},
 
 		created() {
-		}	
-				
+		}
+
 	};
 
 </script>

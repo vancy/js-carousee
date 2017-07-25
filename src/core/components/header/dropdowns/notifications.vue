@@ -1,58 +1,47 @@
-<template lang="pug">
-	.notification-dropdown(:class="{ 'visible': visible }")
-		.panel
-			.header 
-				.left {{ "Notifications" | i18n }}
-				.right
-					a.link(href="#") 
-						small {{ "MarkAllAsRead" | i18n }}
-			.body 
-				.list
-					.item
-						img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/dustin/73.jpg")
-						.body
-							p.text-justify 
-								strong Thomas 
-								| posted a new article
-						.footer.text-right
-							small.text-muted 1 min ago
-					.item
-						img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/connor_gaunt/73.jpg")
-						.body
-							p.text-justify 
-								strong Adam 
-								| changed his contact information
-						.footer.text-right
-							small.text-muted 3 min ago
-					.item
-						img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/73.jpg")
-						.body
-							p.text-justify 
-								strong Samantha 
-								| replied to your comment
-						.footer.text-right
-							small.text-muted 15 min ago
-					.item
-						img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/ritu/73.jpg")
-						.body
-							p.text-justify 
-								strong Bill 
-								| bought a new TV
-						.footer.text-right
-							small.text-muted 3 hours ago
-					.item
-						img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/73.jpg")
-						.body
-							p.text-justify 
-								strong Chris 
-								| posted a new blog post
-						.footer.text-right
-							small.text-muted 1 day ago
-			.footer.text-center
-				a.link(href="#") {{ "SeeAllNotifications" | i18n }}
-
-
-
+<template>
+  <div class="notification-dropdown" :class="{ 'visible': visible }">
+    <div class="panel">
+      <div class="header">
+        <div class="left">{{ "Notifications" | i18n }}</div>
+        <div class="right"><a class="link" href="#"> <small>{{ "MarkAllAsRead" | i18n }}</small></a></div>
+      </div>
+      <div class="body">
+        <div class="list">
+          <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/dustin/73.jpg"/>
+            <div class="body">
+              <p class="text-justify"> <strong>Thomas </strong>posted a new article</p>
+            </div>
+            <div class="footer text-right"><small class="text-muted">1 min ago</small></div>
+          </div>
+          <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/connor_gaunt/73.jpg"/>
+            <div class="body">
+              <p class="text-justify"> <strong>Adam </strong>changed his contact information</p>
+            </div>
+            <div class="footer text-right"><small class="text-muted">3 min ago</small></div>
+          </div>
+          <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/73.jpg"/>
+            <div class="body">
+              <p class="text-justify"> <strong>Samantha </strong>replied to your comment</p>
+            </div>
+            <div class="footer text-right"><small class="text-muted">15 min ago</small></div>
+          </div>
+          <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/ritu/73.jpg"/>
+            <div class="body">
+              <p class="text-justify"> <strong>Bill </strong>bought a new TV</p>
+            </div>
+            <div class="footer text-right"><small class="text-muted">3 hours ago</small></div>
+          </div>
+          <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/73.jpg"/>
+            <div class="body">
+              <p class="text-justify"> <strong>Chris </strong>posted a new blog post</p>
+            </div>
+            <div class="footer text-right"><small class="text-muted">1 day ago</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer text-center"><a class="link" href="#">{{ "SeeAllNotifications" | i18n }}</a></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -64,7 +53,7 @@
 		]
 
 	};
-	
+
 </script>
 
 <style lang="scss">

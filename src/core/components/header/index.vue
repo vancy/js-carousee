@@ -1,15 +1,10 @@
-<template lang="pug">
-	section.page-header
-
-		logo.left
-
-		.menu-toggle.left(@click="toggleSidebar()")
-			i.fa.fa-bars
-
-		search-box.left
-
-		user-box.right
-
+<template>
+  <section class="page-header">
+    <logo class="left"></logo>
+    <div class="menu-toggle left" @click="toggleSidebar()"><i class="fa fa-bars"></i></div>
+    <search-box class="left"></search-box>
+    <user-box class="right"></user-box>
+  </section>
 </template>
 
 <script>
@@ -29,7 +24,7 @@
 		]
 
 	};
-	
+
 </script>
 
 <style lang="scss">

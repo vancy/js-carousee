@@ -1,66 +1,50 @@
-<template lang="pug">
-	.container
-		h2.title {{ _('Posts') }}
-
-		.header.flex.row.justify-space-between
-			.group.sort
-				a.link(@click="changeSort('-votes')", :class="{ active: sort == '-votes' }") {{ _("Hot") }}
-				a.link(@click="changeSort('-views')", :class="{ active: sort == '-views' }") {{ _("MostViewed") }}
-				a.link(@click="changeSort('-createdAt')", :class="{ active: sort == '-createdAt' }") {{ _("New") }}
-
-			button.button.primary(@click="newPost")
-				span.icon
-					i.fa.fa-plus
-				span {{ _("NewPost") }}
-
-			.group.filter
-				a.link(@click="changeViewMode('all')", :class="{ active: viewMode == 'all' }") {{ _("AllPosts") }}
-				a.link(@click="changeViewMode('my')", :class="{ active: viewMode == 'my' }") {{ _("MyPosts") }}
-
-		.postForm(v-if="showForm")
-			vue-form-generator(:schema='schema', :model='model', :options='{}', :multiple="false", ref="form", :is-new-model="isNewPost")
-
-			.group.buttons
-				button.button.primary(@click="savePost") {{ _("Save") }}
-				button.button(@click="cancelPost") {{ _("Cancel") }}
-
-
-		transition-group.posts(name="post", tag="ul")
-			li(v-for="post of posts", :key="post.code")
-				article.media
-					.media-left
-						img.avatar(:src="post.author.avatar")
-
-						.votes(:class="{ voted: iVoted(post) }")
-							.count.text-center {{ post.votes }}
-							.thumb.text-center(@click="toggleVote(post)")
-								i.fa.fa-thumbs-o-up
-					.media-content
-						h3 {{ post.title }}
-
-						p.content(v-html="markdown(post.content)")
-						hr.full
-						.row
-							.functions.left
-								a(:title="_('EditPost')", @click="editPost(post)")
-									i.fa.fa-pencil
-								a(:title="_('DeletePost')", @click="deletePost(post)")
-									i.fa.fa-trash
-							.voters.left(:title="_('Voters')")
-								template(v-for="voter in lastVoters(post)")
-									img(:src="voter.avatar", :title="voter.fullName + ' (' + voter.username + ')'")
-							.right.text-right
-								template(v-if="post.editedAt")
-									small.text-muted {{ editedAgo(post) }}
-									br
-								small.text-muted {{ createdAgo(post) }}
-
-		.loadMore.text-center(v-if="hasMore")
-			button.button.outline(@click="loadMoreRows", :class="{ 'loading': fetching }") {{ _("LoadMore") }}
-		.noMore.text-center(v-if="!hasMore")
-			span.text-muted You reached the end of the list.
-		hr
-</template>
+<template></template>
+<div class="container">
+  <h2 class="title">{{ _('Posts') }}</h2>
+  <div class="header flex row justify-space-between">
+    <div class="group sort"><a class="link" @click="changeSort('-votes')" :class="{ active: sort == '-votes' }">{{ _("Hot") }}</a><a class="link" @click="changeSort('-views')" :class="{ active: sort == '-views' }">{{ _("MostViewed") }}</a><a class="link" @click="changeSort('-createdAt')" :class="{ active: sort == '-createdAt' }">{{ _("New") }}</a></div>
+    <button class="button primary" @click="newPost"><span class="icon"><i class="fa fa-plus"></i></span><span>{{ _("NewPost") }}</span></button>
+    <div class="group filter"><a class="link" @click="changeViewMode('all')" :class="{ active: viewMode == 'all' }">{{ _("AllPosts") }}</a><a class="link" @click="changeViewMode('my')" :class="{ active: viewMode == 'my' }">{{ _("MyPosts") }}</a></div>
+  </div>
+  <div class="postForm" v-if="showForm">
+    <vue-form-generator :schema="schema" :model="model" :options="{}" :multiple="false" ref="form" :is-new-model="isNewPost"></vue-form-generator>
+    <div class="group buttons">
+      <button class="button primary" @click="savePost">{{ _("Save") }}</button>
+      <button class="button" @click="cancelPost">{{ _("Cancel") }}</button>
+    </div>
+  </div>
+  <transition-group class="posts" name="post" tag="ul">
+    <li v-for="post of posts" :key="post.code">
+      <article class="media">
+        <div class="media-left"><img class="avatar" :src="post.author.avatar"/>
+          <div class="votes" :class="{ voted: iVoted(post) }">
+            <div class="count text-center">{{ post.votes }}</div>
+            <div class="thumb text-center" @click="toggleVote(post)"><i class="fa fa-thumbs-o-up"></i></div>
+          </div>
+        </div>
+        <div class="media-content">
+          <h3>{{ post.title }}</h3>
+          <p class="content" v-html="markdown(post.content)"></p>
+          <hr class="full"/>
+          <div class="row">
+            <div class="functions left"><a :title="_('EditPost')" @click="editPost(post)"><i class="fa fa-pencil"></i></a><a :title="_('DeletePost')" @click="deletePost(post)"><i class="fa fa-trash"></i></a></div>
+            <div class="voters left" :title="_('Voters')">
+              <template v-for="voter in lastVoters(post)"><img :src="voter.avatar" :title="voter.fullName + ' (' + voter.username + ')'"/></template>
+            </div>
+            <div class="right text-right">
+              <template v-if="post.editedAt"><small class="text-muted">{{ editedAgo(post) }}</small><br/></template><small class="text-muted">{{ createdAgo(post) }}</small>
+            </div>
+          </div>
+        </div>
+      </article>
+    </li>
+  </transition-group>
+  <div class="loadMore text-center" v-if="hasMore">
+    <button class="button outline" @click="loadMoreRows" :class="{ 'loading': fetching }">{{ _("LoadMore") }}</button>
+  </div>
+  <div class="noMore text-center" v-if="!hasMore"><span class="text-muted">You reached the end of the list.</span></div>
+  <hr/>
+</div>
 
 <script>
 	import Vue from "vue";
@@ -104,7 +88,7 @@
 							required: true,
 							placeholder: this._("TitleOfPost"),
 							validator: validators.string
-						},				
+						},
 						{
 							type: "textArea",
 							label: this._("Content"),
@@ -163,11 +147,11 @@
 				 * @param  {Object} res Post object
 				 */
 				removed(res) {
-					this.removed(res.data);	
+					this.removed(res.data);
 					toast.success(this._("PostNameDeleted", res), this._("PostDeleted"));
 				}
 			}
-		},	
+		},
 
 		methods: {
 			...mapActions("posts", [
@@ -195,7 +179,7 @@
 			toggleVote(post) {
 				if (this.iVoted(post))
 					this.unVote(post);
-				else 
+				else
 					this.vote(post);
 			},
 
@@ -245,7 +229,7 @@
 					if (el)
 						el.focus();
 				});
-			},			
+			},
 
 			savePost() {
 				if (this.$refs.form.validate()) {
@@ -364,9 +348,9 @@
 				}
 			}
 
-			.media-content {				
+			.media-content {
 				overflow-x: auto;
-				
+
 				h3 {
 					margin: 0 0 0.5em 0;
 				}

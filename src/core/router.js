@@ -17,5 +17,7 @@ export default new Router({
 		// { path: "/posts", name: 'Posts', component: Posts },
 		// { path: "/counter", name: 'Counter', component: Counter },
 		// { path: "/profile", name: 'Profile', component: Profile }
+		// { path: "/users", component: User, meta: { needRole: "admin" } },
+		//{ path: "*", component: NotFound }
   ]
 })
