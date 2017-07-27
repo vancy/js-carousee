@@ -51,15 +51,15 @@
             <h3>Heading #3 -  {{ getTypographyInfo("h3") }}</h3>
             <h4>Heading #4 -  {{ getTypographyInfo("h4") }}</h4>
             <h5>Heading #5 -  {{ getTypographyInfo("h5") }}</h5>
-            <h5>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 éáűőúöüóí ÉÁŰŐÚÖÜÓÍ </h5>
+            <h5>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 éáűőúöüóí ÉÁŰŐÚÖÜÓÍ</h5>
           </div>
           <hr/>
           <div class="paragraph">
             <p>Paragraph - {{ getTypographyInfo("p") }}</p>
             <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 éáűőúöüóí ÉÁŰŐÚÖÜÓÍ</p>
-            <p>An example paragraph with <strong>strong text</strong> and <em>emphasized text</em>, spanning <br/>multiple lines so you can see the line-height.</p>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius ipsum tortor, eget convallis ante sagittis ac. Nulla eget bibendum dolor. Praesent at ipsum bibendum, malesuada quam tincidunt, lobortis purus. Donec vel mi mollis, sagittis libero non, ultrices elit. Nulla non mauris in sapien mattis scelerisque. Vivamus maximus tincidunt mi, interdum pellentesque urna feugiat sed. Suspendisse vulputate metus leo, nec hendrerit sapien tincidunt ac. Vivamus non libero luctus, suscipit libero ut, elementum enim. <a class="link" href="#">Read more</a></p>
-            <p>Fusce aliquam sem lorem, in porttitor orci dignissim at. Sed non dolor at orci dignissim bibendum a non nibh. Duis nec vestibulum dui, sit amet lobortis ligula. Sed aliquam mauris nunc, eu sodales est faucibus vitae. Ut sed accumsan lectus. Interdum et <a class="link" href="#">malesuada</a> fames ac ante ipsum primis in faucibus. Aenean dignissim odio vehicula ligula varius, ac ullamcorper tortor molestie. Phasellus dolor dui, egestas id ornare in, suscipit et dolor.</p>
+            <p>An example paragraph with<strong>strong text</strong> and<em>emphasized text</em>, spanning<br/>multiple lines so you can see the line-height.</p>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius ipsum tortor, eget convallis ante sagittis ac. Nulla eget bibendum dolor. Praesent at ipsum bibendum, malesuada quam tincidunt, lobortis purus. Donec vel mi mollis, sagittis libero non, ultrices elit. Nulla non mauris in sapien mattis scelerisque. Vivamus maximus tincidunt mi, interdum pellentesque urna feugiat sed. Suspendisse vulputate metus leo, nec hendrerit sapien tincidunt ac. Vivamus non libero luctus, suscipit libero ut, elementum enim.<a class="link" href="#">Read more</a></p>
+            <p>Fusce aliquam sem lorem, in porttitor orci dignissim at. Sed non dolor at orci dignissim bibendum a non nibh. Duis nec vestibulum dui, sit amet lobortis ligula. Sed aliquam mauris nunc, eu sodales est faucibus vitae. Ut sed accumsan lectus. Interdum et<a class="link" href="#">malesuada</a> fames ac ante ipsum primis in faucibus. Aenean dignissim odio vehicula ligula varius, ac ullamcorper tortor molestie. Phasellus dolor dui, egestas id ornare in, suscipit et dolor.</p>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@
           <div class="content flex align-center justify-space-around buttons">
             <button class="button">Normal</button>
             <button class="button primary">Primary</button>
-            <button class="button success"> <i class="icon fa fa-check"></i>Success</button>
+            <button class="button success"><i class="icon fa fa-check"></i>Success</button>
             <button class="button warning">Warning</button>
             <button class="button danger">Danger</button>
             <button class="button outline">Outline</button>
@@ -82,7 +82,7 @@
           <div class="content flex align-center justify-space-around buttons">
             <button class="button large">Normal</button>
             <button class="button large primary">Primary</button>
-            <button class="button large success"> <i class="icon fa fa-check"></i>Success</button>
+            <button class="button large success"><i class="icon fa fa-check"></i>Success</button>
             <button class="button large warning">Warning</button>
             <button class="button large danger">Danger</button>
             <button class="button large outline">Outline</button>
@@ -117,7 +117,7 @@
           <div class="content flex align-center justify-space-around buttons">
             <button class="button"><i class="fa fa-home"></i></button>
             <button class="button primary"><i class="fa fa-tasks"></i></button>
-            <button class="button success"> <i class="fa fa-cogs"></i></button>
+            <button class="button success"><i class="fa fa-cogs"></i></button>
             <button class="button warning"><i class="fa fa-comments"></i></button>
             <button class="button danger"><i class="fa fa-trash"></i></button>
             <button class="button outline"><i class="fa fa-pencil"></i></button>
@@ -127,18 +127,18 @@
           <legend>Floating buttons</legend>
           <div class="content flex align-center justify-space-around buttons">
             <button class="button fab"><i class="icon fa fa-plus"></i>Normal</button>
-            <button class="button fab large primary"> <i class="icon fa fa-plus"></i>Primary</button>
+            <button class="button fab large primary"><i class="icon fa fa-plus"></i>Primary</button>
             <button class="button fab success"><i class="icon fa fa-check"></i>Success</button>
             <button class="button fab warning" disabled="disabled"><i class="icon fa fa-comments"></i>Warning</button>
             <button class="button fab danger"><i class="icon fa fa-trash"></i>Danger</button>
-            <button class="button fab outline"><i class="icon fa fa-bars"></i>Outline				</button>
+            <button class="button fab outline"><i class="icon fa fa-bars"></i>Outline</button>
           </div>
         </fieldset>
         <fieldset>
           <legend>Button group</legend>
           <div class="content flex align-center justify-space-around buttons">
             <div class="button-group">
-              <button class="button"> <i class="icon fa fa-align-left"></i>Left</button>
+              <button class="button"><i class="icon fa fa-align-left"></i>Left</button>
               <button class="button"><i class="icon fa fa-align-center"></i>Middle</button>
               <button class="button"><i class="icon fa fa-align-right"></i>Right</button>
             </div>
@@ -182,7 +182,7 @@
                 <select class="form-control" id="select1">
                   <option>Option 1</option>
                   <option>Option 2</option>
-                  <option>Option 3 </option>
+                  <option>Option 3</option>
                   <option>Option 4</option>
                 </select>
               </div>
@@ -215,10 +215,10 @@
       <section>
         <h2><span class="number">5.</span><span class="text">Alerts</span></h2>
         <div class="content alerts">
-          <div class="alert"> <i class="icon fa fa-info-circle"></i>This is a neutral alert.						</div>
+          <div class="alert"><i class="icon fa fa-info-circle"></i>This is a neutral alert.</div>
           <div class="alert alert-success"><i class="icon fa fa-check"></i>This is a success alert.<a class="alert-close" href="x">&times;</a></div>
-          <div class="alert alert-warning"><i class="icon fa fa-exclamation-triangle"></i>This is a warning alert.<a class="alert-close" href="x">&times;				</a></div>
-          <div class="alert alert-error"><i class="icon fa fa-times-circle"></i><strong>Error!</strong>This is an error alert.<a class="alert-close" href="x">&times;		</a></div>
+          <div class="alert alert-warning"><i class="icon fa fa-exclamation-triangle"></i>This is a warning alert.<a class="alert-close" href="x">&times;</a></div>
+          <div class="alert alert-error"><i class="icon fa fa-times-circle"></i><strong>Error!</strong>This is an error alert.<a class="alert-close" href="x">&times;</a></div>
           <div class="alert alert-success">
             <h4>Well done!</h4>
             <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
@@ -233,8 +233,8 @@
               <tr>
                 <th>#</th>
                 <th class="sortable">Name</th>
-                <th class="sortable"> <i class="fa fa-envelope"></i>Mail</th>
-                <th class="sortable"> <i class="fa fa-phone"></i>Phone</th>
+                <th class="sortable"><i class="fa fa-envelope"></i>Mail</th>
+                <th class="sortable"><i class="fa fa-phone"></i>Phone</th>
                 <th class="sortable text-right">Outstanding</th>
                 <th class="text-right">Functions</th>
               </tr>
@@ -248,7 +248,7 @@
                 <td class="text-right">$2,400.00</td>
                 <td class="text-right">
                   <button class="button small">Edit</button>
-                  <button class="button small danger"> <i class="icon fa fa-trash"></i>Delete</button>
+                  <button class="button small danger"><i class="icon fa fa-trash"></i>Delete</button>
                 </td>
               </tr>
               <tr>
@@ -259,7 +259,7 @@
                 <td class="text-right">$2,400.00</td>
                 <td class="text-right">
                   <button class="button small">Edit</button>
-                  <button class="button small danger"> <i class="icon fa fa-trash"></i>Delete</button>
+                  <button class="button small danger"><i class="icon fa fa-trash"></i>Delete</button>
                 </td>
               </tr>
               <tr class="selected">
@@ -270,7 +270,7 @@
                 <td class="text-right">$2,400.00</td>
                 <td class="text-right">
                   <button class="button small">Edit</button>
-                  <button class="button small danger"> <i class="icon fa fa-trash"></i>Delete</button>
+                  <button class="button small danger"><i class="icon fa fa-trash"></i>Delete</button>
                 </td>
               </tr>
               <tr class="inactive">
@@ -281,18 +281,18 @@
                 <td class="text-right">$2,400.00</td>
                 <td class="text-right">
                   <button class="button small">Edit</button>
-                  <button class="button small danger"> <i class="icon fa fa-trash"></i>Delete</button>
+                  <button class="button small danger"><i class="icon fa fa-trash"></i>Delete</button>
                 </td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <td>4</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td class="text-right">$15,500.00</td>
-                <td class="text-right"> </td>
+                <td class="text-right"></td>
               </tr>
             </tfoot>
           </table>
@@ -405,7 +405,7 @@
               </div>
             </div>
             <div class="panel primary">
-              <div class="ribbon right red"> <span>Primary</span></div>
+              <div class="ribbon right red"><span>Primary</span></div>
               <div class="header">Panel primary</div>
               <div class="body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.</p>
@@ -416,31 +416,31 @@
               <div class="body">
                 <div class="list">
                   <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/>
-                    <div class="body"><strong>Message title <small class="text-muted">John Doe</small></strong>
+                    <div class="body"><strong>Message title<small class="text-muted">John Doe</small></strong>
                       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi mollitia ratione fugiat earum qui sit vero nisi pariatur eaque quasi reprehenderit possimus consequatur commodi cum quod, amet sed cupiditate?</p>
                     </div>
                     <div class="footer text-right"><small class="text-muted">1 min ago</small></div>
                   </div>
                   <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/>
-                    <div class="body"><strong>Message title <small class="text-muted">John Doe</small></strong>
+                    <div class="body"><strong>Message title<small class="text-muted">John Doe</small></strong>
                       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi mollitia ratione fugiat earum qui sit vero nisi pariatur eaque quasi reprehenderit possimus consequatur commodi cum quod, amet sed cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis sapiente non atque qui quis pariatur impedit ea cupiditate culpa repellat voluptate, ipsam id illo incidunt nam commodi optio? Quasi.</p>
                     </div>
                     <div class="footer text-right"><small class="text-muted">3 min ago</small></div>
                   </div>
                   <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/>
-                    <div class="body"><strong>Message title <small class="text-muted">John Doe</small></strong>
+                    <div class="body"><strong>Message title<small class="text-muted">John Doe</small></strong>
                       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi mollitia ratione fugiat earum qui sit vero nisi.</p>
                     </div>
                     <div class="footer text-right"><small class="text-muted">15 min ago</small></div>
                   </div>
                   <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/>
-                    <div class="body"><strong>Message title <small class="text-muted">John Doe</small></strong>
+                    <div class="body"><strong>Message title<small class="text-muted">John Doe</small></strong>
                       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi mollitia ratione fugiat earum qui sit vero nisi pariatur eaque quasi reprehenderit possimus consequatur commodi cum quod, amet sed cupiditate?</p>
                     </div>
                     <div class="footer text-right"><small class="text-muted">3 hours ago</small></div>
                   </div>
                   <div class="item"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/>
-                    <div class="body"><strong>Message title <small class="text-muted">John Doe</small></strong>
+                    <div class="body"><strong>Message title<small class="text-muted">John Doe</small></strong>
                       <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi mollitia ratione fugiat earum qui sit vero nisi pariatur eaque quasi reprehenderit possimus consequatur commodi cum quod, amet sed cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo officia, nulla ad quae. Possimus, necessitatibus excepturi ad vel aspernatur ipsam molestiae. Blanditiis assumenda, doloribus tenetur inventore, earum fugiat! Ducimus, recusandae.</p>
                     </div>
                     <div class="footer text-right"><small class="text-muted">1 day ago</small></div>
@@ -484,7 +484,7 @@
               <div class="block"><small class="text-muted">Last updated 5 mins ago</small></div>
             </div>
             <div class="card">
-              <div class="ribbon right orange"> <span>-20%</span></div><img class="img" src="http://lorempixel.com/350/150/city"/>
+              <div class="ribbon right orange"><span>-20%</span></div><img class="img" src="http://lorempixel.com/350/150/city"/>
               <div class="block">
                 <div class="title">Card with image</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.</p>
@@ -494,7 +494,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="ribbon left primary"> <span>Brand new</span></div><img class="img" src="http://placehold.it/350x150"/>
+              <div class="ribbon left primary"><span>Brand new</span></div><img class="img" src="http://placehold.it/350x150"/>
               <div class="block">
                 <div class="title">Card Title wih ribbon</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.</p>
@@ -512,24 +512,21 @@
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 1</div>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos repellendus architecto molestiae iure enim labore dolores similique, quia consequatur culpa, at cumque ad tenetur nemo vitae dolorem ipsum repellat optio! <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos repellendus architecto molestiae iure enim labore dolores similique, quia consequatur culpa, at cumque ad tenetur nemo vitae dolorem ipsum repellat optio!<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 2</div>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptate, neque voluptatibus mollitia aliquid, harum in laborum non amet cupiditate ea nisi necessitatibus quis! Earum architecto corporis molestiae nihil molestias? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, voluptate. Eaque nisi alias consectetur ipsum eveniet qui esse repellat voluptas mollitia, obcaecati corporis a modi officia, architecto commodi eius sint! <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptate, neque voluptatibus mollitia aliquid, harum in laborum non amet cupiditate ea nisi necessitatibus quis! Earum architecto corporis molestiae nihil molestias? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, voluptate. Eaque nisi alias consectetur ipsum eveniet qui esse repellat voluptas mollitia, obcaecati corporis a modi officia, architecto commodi eius sint!<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 3</div>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.  <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
@@ -543,7 +540,7 @@
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 5</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
               <div class="block">
@@ -553,24 +550,22 @@
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 6</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum quos autem magnam doloribus sunt. Atque quas accusamus repellat, odio dolore sapiente voluptatibus nemo numquam eum odit tempore, similique natus! <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum quos autem magnam doloribus sunt. Atque quas accusamus repellat, odio dolore sapiente voluptatibus nemo numquam eum odit tempore, similique natus!<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 7</div>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
             <div class="card">
               <div class="block">
                 <div class="title">Small Card 8</div>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa <a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa<a class="link" href="https://twitter.com/Icebobcsi">@Icebobcsi</a></p>
               </div>
               <div class="block"><small class="text-muted">08:45 PM - 14 Jun 2016</small></div>
             </div>
@@ -585,7 +580,7 @@
             <div class="media">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.</p>
                 <p>Elit ex id excepteur aliqua sint et culpa nisi laborum. Cupidatat anim aliqua nisi tempor nisi sint mollit non elit laboris consequat. Ut sint mollit voluptate quis sunt magna voluptate incididunt amet voluptate aute occaecat nulla. Nostrud ut eiusmod duis consequat sunt proident in aute esse adipisicing cupidatat commodo consequat dolor. Irure minim consectetur est duis nulla aliqua fugiat culpa proident cupidatat elit magna. Dolor esse magna pariatur sint adipisicing cupidatat veniam excepteur aliquip. Qui fugiat non eiusmod do sunt excepteur enim aliquip reprehenderit ullamco.<a class="link" href="#"> Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
@@ -594,7 +589,7 @@
             <div class="media primary">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. <a class="link" href="#">Read more...</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.<a class="link" href="#">Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
               <div class="media-right"><a class="close" href="#" title="Close"></a></div>
@@ -602,7 +597,7 @@
             <div class="media success">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. <a class="link" href="#">Read more...</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.<a class="link" href="#">Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
               <div class="media-right"><a class="close" href="#" title="Close"></a></div>
@@ -610,7 +605,7 @@
             <div class="media warning">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. <a class="link" href="#">Read more...</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.<a class="link" href="#">Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
               <div class="media-right"><a class="close" href="#" title="Close"></a></div>
@@ -618,7 +613,7 @@
             <div class="media danger">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. <a class="link" href="#">Read more...</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.<a class="link" href="#">Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
               <div class="media-right"><a class="close" href="#" title="Close"></a></div>
@@ -626,7 +621,7 @@
             <div class="media outline">
               <div class="media-left"><img class="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg"/></div>
               <div class="media-content"><strong>John Doe</strong><small class="text-muted">@johndoe - 31m ago</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis. <a class="link" href="#">Read more...</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta cumque assumenda culpa maiores omnis totam obcaecati voluptas eligendi sapiente enim debitis, illo dolore facilis, in, nihil perspiciatis, et perferendis.<a class="link" href="#">Read more...</a></p>
                 <div class="functions"><a href="#"><i class="fa fa-reply"></i></a><a href="#"><i class="fa fa-heart"></i></a><a href="#"><i class="fa fa-trash"></i></a></div>
               </div>
               <div class="media-right"><a class="close" href="#" title="Close"></a></div>
@@ -640,7 +635,7 @@
 
 <script>
 	export default {
-
+    name: 'style',
 		methods: {
 			getTypographyInfo(elType) {
 				if (this.$el) {
@@ -660,7 +655,6 @@
 	@import "../../scss/themes/blurred/variables";
 
 	.container {
-		padding: 0 1rem;
 	}
 
 	section {

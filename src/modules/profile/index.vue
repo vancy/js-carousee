@@ -1,23 +1,24 @@
 <template>
-  <div class="container">
-    <div class="profile flex row align-stretch"><img class="avatar" :src="profile.avatar"/>
-      <div class="details flex-item-1">
-        <div class="name">{{ profile.fullName }}<span class="text-muted username">({{ profile.username }})</span></div>
-        <div class="tags">
-          <div class="tag primary">!Role name!</div>
-          <div class="tag danger">!Administrator!</div>
-          <div class="tag success">!Online!</div>
-        </div>
-        <div class="description">
-          <div class="info-row" v-if="profile.profile &amp;&amp; profile.profile.location"><i class="fa fa-map-marker"></i><span class="caption">Location:</span><span class="value">{{ profile.profile.location }}</span></div>
-          <div class="info-row"><i class="fa fa-clock-o"></i><span class="caption">Last login:</span><span class="value">!Online!</span></div>
-          <div class="info-row"><i class="fa fa-calendar"></i><span class="caption">Joined:</span><span class="value">{{ profile.createdAt | ago }}							</span></div>
-        </div>
-        <hr class="full"/>
+<div class="container">
+  <div class="profile flex row align-stretch"><img class="avatar" :src="profile.avatar"/>
+    <div class="details flex-item-1">
+      <div class="name">{{ profile.fullName }}<span class="text-muted username">({{ profile.username }})</span></div>
+      <div class="tags">
+        <div class="tag primary">!Role name!</div>
+        <div class="tag danger">!Administrator!</div>
+        <div class="tag success">!Online!</div>
       </div>
+      <div class="description">
+        <div class="info-row" v-if="profile.profile &amp;&amp; profile.profile.location"><i class="fa fa-map-marker"></i><span class="caption">Location:</span><span class="value">{{ profile.profile.location }}</span></div>
+        <div class="info-row"><i class="fa fa-clock-o"></i><span class="caption">Last login:</span><span class="value">!Online!</span></div>
+        <div class="info-row"><i class="fa fa-calendar"></i><span class="caption">Joined:</span><span class="value">{{ profile.createdAt | ago }}							</span></div>
+      </div>
+      <hr class="full"/>
     </div>
-    <pre v-html="this.$options.filters.prettyJSON(profile)"></pre>
   </div>
+  <pre v-html="this.$options.filters.prettyJSON(profile)"></pre>
+</div>
+
 </template>
 
 <script>

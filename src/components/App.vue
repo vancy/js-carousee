@@ -17,22 +17,14 @@
 	import { mapActions, mapGetters } from "vuex";
 
 	export default {
-		/**
-		 * Load sub-components
-		 */
+
 		components: {
 			PageHeader,
 			Sidebar
 		},
 
-		/**
-		 * Create app data object
-		 *
-		 * TODO: move to vuex state
-		 */
 		data() {
 			return {
-				//wsReconnecting: false,
 				miniSidebar: false
 			};
 		},
@@ -44,41 +36,10 @@
 			}
 		},
 
-		/**
-		 * Socket handlers. Every property is an event handler
-		 */
-		// socket: {
-		//
-		// 	events: {
-		// 		/**
-		// 		 * Send welcome message after connect
-		// 		 */
-		// 		connect() {
-		// 			console.log("Websocket connected to " + this.$socket.nsp);
-		//
-		// 			if (this.wsReconnecting) {
-		// 				// Reload browser if connection established after disconnect
-		// 				window.location.reload(true);
-		// 			} else {
-		// 				this.$socket.emit("welcome", "Hello! " + navigator.userAgent);
-		// 			}
-		// 		},
-		//
-		// 		disconnect() {
-		// 			console.log("Websocket disconnected from " + this.$socket.nsp);
-		// 			this.wsReconnecting = true;
-		// 		},
-		//
-		// 		error(err) {
-		// 			console.error("Websocket error!", err);
-		// 		}
-		// 	}
-		// },
-
 		methods: {
-			...mapActions("session", [
-				"getSessionUser"
-			]),
+			...mapActions({
+				"getSessionUser": "session/getSessionUser"
+			}),
 
 			update: function(vm) {
 				if (vm == null)
@@ -99,19 +60,11 @@
 			}
 		},
 
-		/**
-		 * Application created
-		 */
+
 		created() {
 			console.log("App started!");
 			window.app = this;
-
 			this.getSessionUser();
-
-			// debug
-			//window.postService = new Service("posts", this);
-			//window.counterService = new Service("counter", this);
-			//window.deviceService = new Service("device", this);
 
 		}
 	};

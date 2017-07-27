@@ -1,5 +1,19 @@
-<template>
-  <admin-page :schema="schema" :selected="selected" :rows="devices"></admin-page>
+<template lang="pug">
+	div
+		admin-page(:schema="schema", :selected="selected", :rows="devices")
+
+		br
+		br
+		.panel.primary
+			.header 
+				i.fa.fa-info-circle 
+				|  Table & Form demo
+			.body 
+				p This is an admin page demo. We use 
+					a(href="https://github.com/icebob/vue-form-generator", target="_blank") vue-form-generator
+					|  to generate form from schema. 
+				p The table is also generated from schema. You can sort the rows & select multiple rows.
+				p If somebody changes a device, you will get a notification toast.
 </template>
 
 <script>
@@ -11,7 +25,7 @@
 	import { mapGetters, mapActions } from "vuex";
 
 	export default {
-
+		
 		components: {
 			AdminPage: AdminPage
 		},
@@ -35,7 +49,7 @@
 		 */
 		socket: {
 
-			prefix: "/devices/",
+			prefix: "devices.",
 
 			events: {
 				/**
@@ -61,11 +75,11 @@
 				 * @param  {Object} res Response object
 				 */
 				removed(res) {
-					this.removed(res.data);
+					this.removed(res.data);	
 					toast.success(this._("DeviceNameDeleted", res), this._("DeviceDeleted"));
 				}
 			}
-		},
+		},		
 
 		methods: {
 			...mapActions("devices", [

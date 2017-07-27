@@ -8,7 +8,8 @@ import axios from "axios";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 import Filters from "./core/filters";
-import VueI18Next from "./core/i18next.js";
+import VueI18Next from "./core/i18next";
+import store from "./core/store";
 import VueFormGenerator from "vue-form-generator";
 import VueWebsocket from "vue-websocket";
 
@@ -31,6 +32,7 @@ Vue.use(VueI18Next, (i18next) => {
 			App
 		},
 		router,
+		store,
 		render: h => h("app")
 	});
 });

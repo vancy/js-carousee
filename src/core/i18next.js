@@ -12,7 +12,7 @@ function install(Vue, callback, options = {}) {
 		.use(i18NextXHR)
 		.use(i18NextLanguageDetector)
 		.init(defaultsDeep({}, {
-			//lng: "hu",
+			lng: "en",
 			fallbackLng: "en",
 			whitelist: ["en", "hu"],
 			ns: ["app"],
@@ -80,7 +80,7 @@ function install(Vue, callback, options = {}) {
 		bind: function(el, binding, vnode) {
 			el.innerHTML = i18next.t(binding.expression);
 		}
-	});	
+	});
 
 	Vue.prototype.$i18n = i18next;
 	Vue.prototype._ = (key, opts) => {

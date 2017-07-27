@@ -1,10 +1,20 @@
 <template>
   <div class="container">
     <h2 class="title">{{ "Demo" | i18n }}</h2>
-    <h3>{{ count }}</h3>
-    <button class="button success" @click="inc"> <span class="icon"><i class="fa fa-arrow-up"> </i></span><span>{{ "Increment" | i18n }}</span></button><br/><br/>
-    <button class="button warning" @click="dec"> <span><i class="fa fa-arrow-up"> </i></span><span>{{ "Decrement" | i18n }}</span></button>
+    <h3>Value: {{ count }}</h3>
+    <button class="button success" @click="increment"> <span class="icon"><i class="fa fa-arrow-up"> </i></span><span>{{ "Increment" | i18n }}</span></button><br/><br/>
+    <button class="button warning" @click="decrement"> <span class="icon"><i class="fa fa-arrow-up"> </i></span><span>{{ "Decrement" | i18n }}</span></button><br/><br/>
+    <div class="panel primary">
+      <div class="header"> <i class="fa fa-info-circle"> </i> Websocket demo</div>
+      <div class="body">
+        <p>This is a simple counter demo. You can increment & decrement the value with buttons. We use websocket for communication. The value is global, so you can see if somebody changed it.</p>
+        <p>Try the following commands in the console of the browser:</p>
+        <pre>counterService.emit("increment");
+counterService.emit("set", { value: 50 });</pre>
+      </div>
+    </div>
   </div>
+	
 </template>
 
 <script>
@@ -32,30 +42,14 @@
 				"increment",
 				"decrement",
 				"changedValue"
-			]),
-
-			/**
-			 * Increment counter
-			 */
-			inc() {
-				this.increment();
-			},
-
-			/**
-			 * Decrement counter
-			 */
-			dec() {
-				this.decrement();
-			}
+			])
 		},
 
 		/**
 		 * Socket handlers. Every property is an event handler
 		 */
 		socket: {
-
-			prefix: "/counter/",
-
+			prefix: "counter.",
 			//namespace: "/counter",
 
 			events: {
