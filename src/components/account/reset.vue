@@ -1,39 +1,32 @@
-extends ../layout
+<template>
+	<div class="center-container">
+	  <div class="panel">
+	    <div class="bg"></div>
+	    <div class="bg-overlay"></div>
+	    <div class="content">
+	      <form method="POST">
+	        <input type="hidden" name="_csrf"/>
+	        <header>ResetPasswordTitle</header>
+	        <div class="form-group">
+	          <label for="password">NewPassword</label>
+	          <input class="form-control" type="password" name="password" id="password" placeholder="NewPassword" autofocus="autofocus" required="required"/>
+	        </div>
+	        <div class="form-group">
+	          <label for="confirm">ConfirmPassword</label>
+	          <input class="form-control" type="password" name="confirm" id="confirm" placeholder="ConfirmPassword" required="required"/>
+	        </div>
+	        <div class="form-group">
+	          <button type="submit">ChangePassword</button>
+	        </div>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+</template>
 
-block styles
-	// Site stylesheet
-	link(rel='stylesheet', href='/app/styles/frontend.css')
+<script>
+</script>
 
-block content
-	.center-container
-		.panel
-			.bg
-			.bg-overlay
-			.content
-				form(method='POST')
-					input(type='hidden', name='_csrf', value=_csrf)
-
-					header= t("ResetPasswordTitle")
-						
-					.form-group
-						label(for='password')= t("NewPassword")
-						input.form-control(type='password', name='password', id='password', placeholder=t("NewPassword"), autofocus, required)
-					.form-group
-						label(for='confirm')= t("ConfirmPassword")
-						input.form-control(type='password', name='confirm', id='confirm', placeholder=t("ConfirmPassword"), required)
-
-					.flash
-						if messages.info
-							.alert.alert-success
-								for info in messages.info
-									div= info.msg
-						if messages.error
-							.alert.alert-danger
-								for error in messages.error
-									div= error.msg	
-					.form-group
-						button(type='submit')= t("ChangePassword")
-
-block scripts
-	script(src='/app/vendor.js')
-	script(src='/app/frontend.js')
+<style lang="scss">
+	@import "../scss/style.scss";
+</style>

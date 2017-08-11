@@ -1,78 +1,50 @@
-extends ../layout
+<template>
+	<div class="center-container">
+  <div class="panel">
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+    <div class="content">
+      <form action="/signup" method="POST">
+        <input type="hidden" name="_csrf"/>
+        <header>SignUp</header>
+        <div class="form-group">
+          <label for="name">NameSC</label>
+          <input type="text" name="name" id="name" placeholder="YourName" autofocus="autofocus" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="email">EmailSC</label>
+          <input type="email" name="email" id="email" placeholder="YourEmail" required="required"/>
+          <div class="hint"></div>
+        </div>
+        <div class="form-group">
+          <label for="username">UsernameSC</label>
+          <input type="text" name="username" id="username" placeholder="YourUsername"/>
+          <div class="hint"></div>
+        </div>
+        <div class="form-group switch">
+          <div>PasswordlessAccount</div>
+          <input type="checkbox" name="passwordless" id="passwordless"/>
+          <label for="passwordless"></label>
+          <div class="hint"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">PasswordSC</label>
+          <input type="password" name="password" id="password" placeholder="Password"/>
+        </div>
+        <div class="form-group">
+          <button class="signup" type="submit">SignUp</button>
+        </div>
+        <hr/>
+        <div class="alreadyLink"><span>AlreadyHaveAnAccount</span><a href="/login">Login</a></div>
+      </form>
+    </div>
+  </div>
+</div>
+</template>
 
-block styles
-	// Site stylesheet
-	link(rel='stylesheet', href='/app/styles/frontend.css')
+<script>
+</script>
 
-block content
-	.center-container
-		.panel
-			.bg
-			.bg-overlay
-			.content
-				form(action='/signup', method='POST')
-					input(type="hidden", name="_csrf" value=_csrf)
-
-					header= t("SignUp")
-					.form-group
-						label(for='name')= t("NameSC")
-						input(type='text', name='name', id='name', placeholder=t("YourName"), autofocus=true, required)
-					.form-group
-						label(for='email')= t("EmailSC")
-						input(type='email', name='email', id='email', placeholder=t("YourEmail"), required)
-						.hint
-					.form-group
-						label(for='username')= t("UsernameSC")
-						input(type='text', name='username', id='username', placeholder=t("YourUsername"))
-						.hint
-					.form-group.switch
-						div= t("PasswordlessAccount")
-						input(type='checkbox', name='passwordless', id='passwordless')
-						label(for='passwordless')
-						.hint
-
-					.form-group
-						label(for='password')= t("PasswordSC")
-						input(type='password', name='password', id='password', placeholder=t("Password"))
-
-					.flash
-						if messages.error
-							.alert.alert-danger
-								for error in messages.error
-									div= error.msg
-						if messages.info
-							.alert.alert-success
-								for info in messages.info
-									div= info.msg
-
-					.form-group
-						button.signup(type='submit')= t("SignUp")
-
-					if socialAuth
-						.or
-							span= t("or")
-
-						.socials
-							if socialAuth.facebook
-								a.group.facebook(href="/auth/facebook", title=t("SignUpFacebook"))
-									i.fa.fa-facebook
-							if socialAuth.google
-								a.group.google(href="/auth/google", title=t("SignupGoogle"))
-									i.fa.fa-google-plus
-							if socialAuth.github
-								a.group.github(href="/auth/github", title=t("SignupGithub"))
-									i.fa.fa-github
-
-					hr
-					.alreadyLink
-						span= t("AlreadyHaveAnAccount")
-						a(href='/login')= t("Login")
-
-block scripts
-	script(src='/app/vendor.js')
-	script(src='/app/frontend.js')
-
-	script.
-		document.querySelector("#passwordless").addEventListener('change', function() {
-			document.querySelector("#password").disabled = this.checked;
-		});
+<style lang="scss">
+	@import "../scss/style.scss";
+</style>

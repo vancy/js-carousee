@@ -11,7 +11,7 @@ import Filters from "./core/filters";
 import VueI18Next from "./core/i18next";
 import store from "./core/store";
 import VueFormGenerator from "vue-form-generator";
-import VueWebsocket from "vue-websocket";
+//import VueWebsocket from "vue-websocket";
 
 import App from "./components/App";
 

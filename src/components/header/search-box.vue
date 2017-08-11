@@ -1,6 +1,6 @@
 <template>
 <div class="search-box"><i class="fa fa-search"></i>
-	<input type="search" v-model="text" :placeholder="_('Search3dots')"/>
+	<input type="search" v-model="text" placeholder="Search does not work"/>
 </div>
 </template>
 

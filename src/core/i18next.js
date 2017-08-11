@@ -23,17 +23,28 @@ function install(Vue, callback, options = {}) {
 
 			backend: {
 				// path where resources get loaded from
-				loadPath: "/locales/resources.json?lng={{lng}}&ns={{ns}}",
+				// loadPath: "/static/locales/add/{{lng}}/{{ns}}.json",
 
 				// path to post missing resources
-				addPath: "/locales/add/{{lng}}/{{ns}}",
+				// addPath: "/static/locales/resources.json?lng={{lng}}&ns={{ns}}",
+
+				// ajax:function loadLocales(url, options, callback, data) {
+				// 				try {
+				//     			let waitForLocale = require('bundle!./locales/'+url+'.json');
+				//     			waitForLocale((locale) => {
+				//       			callback(locale, {status: '200'});
+				//     			})
+				//   			} catch (e) {
+				//     			callback(null, {status: '404'});
+				//   			}
+				// 			},
 
 				// server supports multiloading
 				// /locales/resources.json?lng=de+en&ns=ns1+ns2
 				allowMultiLoading: true,
 
 				// allow cross domain requests
-				crossDomain: false
+				crossDomain: true
 			},
 
 			detection: {
