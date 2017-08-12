@@ -1,5 +1,4 @@
 var utils = require('./utils')
-var path = require('path')
 var webpack = require('webpack')
 var config = require('../config')
 var merge = require('webpack-merge')
@@ -32,8 +31,6 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new FriendlyErrorsPlugin(),
-    // copy custom static assets
-    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
+    new FriendlyErrorsPlugin()
   ]
 })
