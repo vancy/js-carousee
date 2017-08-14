@@ -12,11 +12,11 @@ export default class Service {
 	 * @memberOf Service
 	 */
 	constructor(namespace, vm, socketOpts) {
-		if (vm)
-			this.socket = vm.$socket;
-		else
-			this.socket = IO(socketOpts);
-
+		// if (vm) {
+		// 	this.socket = vm.$socket;
+		// }	else {
+		// 	this.socket = IO(socketOpts);
+		// }
 		this.namespace = namespace;
 		this.axios = axios.create({
 			baseURL: `${namespace}`,
@@ -62,20 +62,20 @@ export default class Service {
 	 *
 	 * @memberOf Service
 	 */
-	emit(action, params) {
-		return new Promise((resolve, reject) => {
-
-			this.socket.emit(`${this.namespace}.${action}`, params, (response) => {
-
-				//console.log("Response: ", response);
-				if (response && response.status == 200)
-					resolve(response.data);
-				else {
-					console.error("Socket emit error!", response.error);
-					reject(response.error);
-				}
-			});
-
-		});
-	}
+	// emit(action, params) {
+	// 	return new Promise((resolve, reject) => {
+	//
+	// 		this.socket.emit(`${this.namespace}.${action}`, params, (response) => {
+	//
+	// 			//console.log("Response: ", response);
+	// 			if (response && response.status == 200)
+	// 				resolve(response.data);
+	// 			else {
+	// 				console.error("Socket emit error!", response.error);
+	// 				reject(response.error);
+	// 			}
+	// 		});
+	//
+	// 	});
+	// }
 }

@@ -15,7 +15,6 @@
 		</ul>
 		<notifications-dropdown :visible="expandedNotifications"></notifications-dropdown>
 		<messages-dropdown :visible="expandedMessages"></messages-dropdown>
-		<div class="copyright">&copy; Copyright, 2016</div>
 	</div>
 </div>
 </template>
