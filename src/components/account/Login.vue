@@ -29,5 +29,5 @@
 </script>
 
 <style lang="scss">
-	@import "../scss/style.scss";
+	@import "../../scss/frontend.scss";
 </style>

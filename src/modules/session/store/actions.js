@@ -19,7 +19,7 @@ export const getSessionUser = ({ commit }) => {
 	*/
 	//Test
 	var user = {
-		fullName: "Lei Zhao"
+		fullName: "Oliver Sinnen"
 	}
 	commit(SET_USER, user);
 };

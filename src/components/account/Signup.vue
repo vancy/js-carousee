@@ -8,27 +8,25 @@
         <input type="hidden" name="_csrf"/>
         <header>SignUp</header>
         <div class="form-group">
-          <label for="name">NameSC</label>
+          <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="YourName" autofocus="autofocus" required="required"/>
         </div>
         <div class="form-group">
-          <label for="email">EmailSC</label>
+          <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="YourEmail" required="required"/>
           <div class="hint"></div>
         </div>
         <div class="form-group">
-          <label for="username">UsernameSC</label>
+          <label for="username">Username</label>
           <input type="text" name="username" id="username" placeholder="YourUsername"/>
           <div class="hint"></div>
         </div>
-        <div class="form-group switch">
-          <div>PasswordlessAccount</div>
-          <input type="checkbox" name="passwordless" id="passwordless"/>
-          <label for="passwordless"></label>
-          <div class="hint"></div>
+				<div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password"/>
         </div>
         <div class="form-group">
-          <label for="password">PasswordSC</label>
+          <label for="password">Comfirm Password</label>
           <input type="password" name="password" id="password" placeholder="Password"/>
         </div>
         <div class="form-group">
@@ -46,5 +44,5 @@
 </script>
 
 <style lang="scss">
-	@import "../scss/style.scss";
+	@import "../../scss/frontend.scss";
 </style>

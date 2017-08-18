@@ -6,7 +6,7 @@
 	    <div class="content">
 	      <form method="POST">
 	        <input type="hidden" name="_csrf"/>
-	        <header>ResetPasswordTitle</header>
+	        <header>Reset Password</header>
 	        <div class="form-group">
 	          <label for="password">NewPassword</label>
 	          <input class="form-control" type="password" name="password" id="password" placeholder="NewPassword" autofocus="autofocus" required="required"/>
@@ -28,5 +28,5 @@
 </script>
 
 <style lang="scss">
-	@import "../scss/style.scss";
+	@import "../../scss/frontend.scss";
 </style>

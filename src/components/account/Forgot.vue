@@ -9,7 +9,7 @@
           <header>Forgot</header>
           <p>ForgotHint</p>
           <div class="form-group">
-            <label for="email">EmailSC</label>
+            <label for="email">Email</label>
             <input class="form-control" type="email" name="email" id="email" placeholder="Email" autofocus="autofocus"/>
           </div>
           <div class="form-group">
@@ -26,5 +26,5 @@
 </script>
 
 <style lang="scss">
-	@import "../scss/style.scss";
+	@import "../../scss/frontend.scss";
 </style>
