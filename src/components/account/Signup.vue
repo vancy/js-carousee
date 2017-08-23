@@ -33,7 +33,7 @@
           <button class="signup" type="submit">SignUp</button>
         </div>
         <hr/>
-        <div class="alreadyLink"><span>AlreadyHaveAnAccount</span><a href="/login">Login</a></div>
+        <div class="alreadyLink"><span>Already Have An Account?</span><a href="/login">Login</a></div>
       </form>
     </div>
   </div>
