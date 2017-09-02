@@ -4,7 +4,7 @@
     <div class="bg"></div>
     <div class="bg-overlay"></div>
     <div class="content">
-      <form action="/login" method="POST">
+      <form action="http://localhost:8080/login" method="POST">
         <input type="hidden" name="_csrf"/>
         <header>Login</header>
         </hr>
@@ -28,11 +28,11 @@
       </form>
       <div class="or"> <span>or</span> </div>
       <div class="socials">
-        <a class="fa fa-facebook" href="/auth/facebook" title="Login via Facebook"></a>
-        <a class="fa fa-google" href="/auth/google" title="Login via Google"></a>
-        <a class="fa fa-twitter" href="/auth/twitter" title="Login via Twitter"></a>
-        <a class="fa fa-weixin" href="/auth/weixin" title="Login via Wechat"></a>
-        <a class="fa fa-weibo" href="/auth/weibo" title="Login via Weibo"></a>
+        <a class="fa fa-facebook" href="http://localhost:8080/login/facebook" title="Login via Facebook"></a>
+        <a class="fa fa-google" href="http://localhost:8080/login/google" title="Login via Google"></a>
+        <a class="fa fa-twitter" href="http://localhost:8080/login/twitter" title="Login via Twitter"></a>
+        <a class="fa fa-weixin" href="http://localhost:8080/login/weixin" title="Login via Wechat"></a>
+        <a class="fa fa-weibo" href="http://localhost:8080/login/weibo" title="Login via Weibo"></a>
       </div>
       <div class="form-group"> </hr> </div>
       <div class="alreadyLink"><span>Don't Have An Account?</span><a href="/signup">Sign Up</a></div>
